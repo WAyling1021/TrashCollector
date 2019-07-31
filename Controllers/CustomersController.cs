@@ -14,7 +14,7 @@ namespace TrashCollectorProject2.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Customers
+        // GET: Customers  
         public ActionResult Index()
         {
             return View(db.Customers.ToList());
@@ -88,6 +88,7 @@ namespace TrashCollectorProject2.Controllers
             }
             return View(customer);
         }
+         
 
         // GET: Customers/Delete/5
         public ActionResult Delete(int? id)
