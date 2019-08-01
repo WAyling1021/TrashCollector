@@ -79,7 +79,7 @@ namespace TrashCollectorProject2.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        public string UserRoles { get; internal set; }
+        public string UserRoles { get; set; }
     }
 
     public class ResetPasswordViewModel
