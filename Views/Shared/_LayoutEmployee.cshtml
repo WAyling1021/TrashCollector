@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Test";
-}
+
 
 <h2>Test</h2>
 <!DOCTYPE html>
@@ -27,8 +27,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Bill")</li>
-                    <li>@Html.ActionLink("Pickup Information", "PickupInformation", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Schedule", "Schedule", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -48,3 +48,4 @@
 </body>
 </html>
 
+    }

@@ -12,8 +12,12 @@ namespace TrashCollectorProject2.Controllers
         {
             return View();
         }
+        public ActionResult PickUp()
+        {
+            ViewBag.Message = "Your pickup schedule.";
 
-
+            return View();
+        }
 
         public ActionResult About()
         {

@@ -179,6 +179,10 @@
     <Compile Include="Migrations\201907311537032_InitialMigration.Designer.cs">
       <DependentUpon>201907311537032_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908021416388_Models.cs" />
+    <Compile Include="Migrations\201908021416388_Models.Designer.cs">
+      <DependentUpon>201908021416388_Models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -254,7 +258,8 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
-    <Content Include="Views\Shared\Test.cshtml" />
+    <Content Include="Views\Shared\_LayoutEmployee.cshtml" />
+    <Content Include="Views\Shared\_layoutCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -276,6 +281,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907311537032_InitialMigration.resx">
       <DependentUpon>201907311537032_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908021416388_Models.resx">
+      <DependentUpon>201908021416388_Models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
