@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -20,14 +21,16 @@ namespace TrashCollectorProject2.Controllers
             return View(db.Customers.ToList());
         }
 
-        // GET: Customers/Details/5
+        // GET: localhost:76543/Customers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
+            string userId = User.Identity.GetUserId();
+            Customer customer = db.Customers.Where(c => c.ApplicationUserId == userId).FirstOrDefault();
+            // Customer customer = db.Customers.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
