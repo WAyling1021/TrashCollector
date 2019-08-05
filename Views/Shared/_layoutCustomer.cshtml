@@ -1,9 +1,4 @@
-﻿
-@{
-    ViewBag.Title = "Test";
-
-
-    <h2>Test</h2>
+﻿ 
     <!DOCTYPE html>
     <html>
     <head>
@@ -28,8 +23,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Pickup", "Pickup", "Home")</li>
-                        <li>@Html.ActionLink("Bill", "Bill", "Home")</li>
+                        <li>@Html.ActionLink("Bill", "Paybill", "Customer")</li>
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>
@@ -48,5 +42,3 @@
         @RenderSection("scripts", required: false)
     </body>
 </html>
-
-    }

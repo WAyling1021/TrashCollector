@@ -13,6 +13,7 @@ namespace TrashCollectorProject2.Controllers
 {
     public class CustomersController : Controller
     {
+
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customers  
@@ -37,6 +38,12 @@ namespace TrashCollectorProject2.Controllers
             }
             return View(customer);
         }
+        public ActionResult Paybill()
+        {
+            var userId = User.Identity.GetUserId();
+            Customer customerView = db.Customers.Where(c => c.ApplicationUserId == userId).Single();
+            return View(customerView); 
+        }
 
         // GET: Customers/Create
         public ActionResult Create()
@@ -53,6 +60,8 @@ namespace TrashCollectorProject2.Controllers
         {
             if (ModelState.IsValid)
             {
+                var userId = User.Identity.GetUserId();
+                customer.ApplicationUserId = userId;
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");

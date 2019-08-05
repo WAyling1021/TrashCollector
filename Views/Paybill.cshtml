@@ -1,0 +1,90 @@
+﻿@model TrashCollectorProject2.Models.Customer
+
+@{
+    ViewBag.Title = "Paybill";
+}
+
+<h2>Paybill</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pickupDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pickupDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OneTimePickup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OneTimePickup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startAndEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startAndEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weeklyPickupDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weeklyPickupDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

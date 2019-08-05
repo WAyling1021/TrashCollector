@@ -12,7 +12,7 @@ namespace TrashCollectorProject2.Controllers
         {
             return View();
         }
-        public ActionResult PickUp()
+        public ActionResult Pickup()
         {
             ViewBag.Message = "Your pickup schedule.";
 
@@ -29,6 +29,12 @@ namespace TrashCollectorProject2.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Paybill()
+        {
+            ViewBag.Message = "Your bill.";
 
             return View();
         }
