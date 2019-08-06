@@ -42,7 +42,7 @@ namespace TrashCollectorProject2.Controllers
         {
             var userId = User.Identity.GetUserId();
             Customer customerView = db.Customers.Where(c => c.ApplicationUserId == userId).Single();
-            return View(customerView); 
+            return View(customerView);
         }
 
         // GET: Customers/Create
